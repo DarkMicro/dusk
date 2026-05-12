@@ -253,6 +253,13 @@ int dMeter2_c::_create() {
 int dMeter2_c::_execute() {
     JKRHeap* heap = mDoExt_setCurrentHeap(mpHeap);
 
+    if (dusk::getSettings().game.minimalHUD) {
+        // Move buttons offscreen
+        g_drawHIO.mButtonCrossOFFPosX = 1E5;
+        g_drawHIO.mButtonCrossONPosX = 1E5;
+        g_drawHIO.mMainHUDButtonsPosX = 1E5;
+    } 
+
     if (!dComIfGs_isCollectMirror(0)
            /* dSv_event_flag_c::F_0685 - Cutscene - (Cutscene 32) Sage appears, get first Mirror of Twilight shard */
         && dComIfGs_isEventBit(dSv_event_flag_c::F_0685)) {
