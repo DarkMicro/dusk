@@ -953,6 +953,9 @@ SettingsWindow::SettingsWindow(bool prelaunch) : mPrelaunch(prelaunch) {
         addOption("Mirror Mode", getSettings().game.enableMirrorMode,
             "Mirrors the world horizontally, matching the Wii version of the game.");
         addOption("Minimal HUD", getSettings().game.minimalHUD,
+            "Disables the item buttons and the d-pad from the main HUD of the game.<br/>"
+            "Useful for a less clutterd screen.");
+        addOption("Disable HUD", getSettings().game.disableHUD,
             "Disables the elements of the main HUD of the game.<br/>Useful for a more immersive "
             "experience.");
         addOption("Restore Wii 1.0 Glitches", getSettings().game.restoreWiiGlitches,
