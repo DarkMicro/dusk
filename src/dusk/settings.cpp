@@ -47,8 +47,7 @@ UserSettings g_userSettings = {
 
         // Preferences
         .enableMirrorMode {"game.enableMirrorMode", false},
-        .minimalHUD {"game.minimalHUD", false},
-        .disableHUD {"game.disbaleHUD", false},
+        .ingameHudMode {"game.ingameHudMode", IngameHudMode::On},
         .pauseOnFocusLost {"game.pauseOnFocusLost", false},
         .enableLinkDollRotation {"game.enableLinkDollRotation", false},
         .enableAchievementToasts {"game.enableAchievementToasts", true},
@@ -213,8 +212,7 @@ void registerSettings() {
     Register(g_userSettings.game.invertFirstPersonXAxis);
     Register(g_userSettings.game.invertFirstPersonYAxis);
     Register(g_userSettings.game.freeCameraSensitivity);
-    Register(g_userSettings.game.minimalHUD);
-    Register(g_userSettings.game.disableHUD);
+    Register(g_userSettings.game.ingameHudMode);
     Register(g_userSettings.game.pauseOnFocusLost);
     Register(g_userSettings.game.enableDiscordPresence);
     Register(g_userSettings.game.bloomMode);
