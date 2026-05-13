@@ -1057,7 +1057,8 @@ SettingsWindow::SettingsWindow(bool prelaunch) : mPrelaunch(prelaunch) {
                         .text = "All On",
                         .isSelected = 
                             [] {
-                                return getSettings().game.ingameHudMode.getValue() == IngameHudMode::On;
+                                return getSettings().game.ingameHudMode.getValue() 
+                                        == IngameHudMode::On;
                             },
                         })
                     .on_pressed([] {
@@ -1069,7 +1070,8 @@ SettingsWindow::SettingsWindow(bool prelaunch) : mPrelaunch(prelaunch) {
                         .text = "All Off",
                         .isSelected = 
                             [] {
-                                return getSettings().game.ingameHudMode.getValue() == IngameHudMode::Off;
+                                return getSettings().game.ingameHudMode.getValue() 
+                                        == IngameHudMode::Off;
                             },
                         })
                     .on_pressed([] {
@@ -1083,7 +1085,8 @@ SettingsWindow::SettingsWindow(bool prelaunch) : mPrelaunch(prelaunch) {
                         .text = kIngameHudModeLabels[i],
                         .isSelected = 
                             [i] {
-                                return static_cast<int>(getSettings().game.ingameHudMode.getValue()) & (1 << i);
+                                return static_cast<int>(getSettings().game.ingameHudMode.getValue()) 
+                                        & (1 << i);
                             },
                         })
                     .on_pressed([i] {
@@ -1100,7 +1103,8 @@ SettingsWindow::SettingsWindow(bool prelaunch) : mPrelaunch(prelaunch) {
                     });
                 }
                 pane.add_rml(
-                    "Toggle various elements of the main HUD of the game. Useful for a more immersive experience."
+                    "Toggle various elements of the main HUD of the game. Useful for a more immersive "
+                    "experience."
                 );
             }
         );
